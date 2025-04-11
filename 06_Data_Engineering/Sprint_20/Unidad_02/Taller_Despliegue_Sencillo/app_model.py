@@ -10,7 +10,7 @@ import numpy as np
 # os.chdir(os.path.dirname(__file__))
 
 app = Flask(__name__)
-app.config['DEBUG'] = True
+
 
 # Enruta la landing page (endpoint /)
 
@@ -18,4 +18,6 @@ app.config['DEBUG'] = True
 
 # Enruta la funcion al endpoint /api/v1/retrain
 
-app.run()
+
+if __name__ == '__main__':
+    app.run(debug=True)
