@@ -40,7 +40,7 @@ def predict(): # Ligado al endpoint '/api/v1/predict', con el método GET
     
     return jsonify({'predictions': prediction[0]})
 
-@app.route('/api/v1/retrain/', methods=['GET'])
+@app.route('/api/v1/retrain', methods=['GET'])
 # Enruta la funcion al endpoint /api/v1/retrain
 def retrain(): # Rutarlo al endpoint '/api/v1/retrain/', metodo GET
     if os.path.exists(path_base + "data/Advertising_new.csv"):
@@ -63,7 +63,7 @@ def retrain(): # Rutarlo al endpoint '/api/v1/retrain/', metodo GET
         return f"<h2>New data for retrain NOT FOUND. Nothing done!</h2>"
     
 
-@app.route('/webhook_2025/', methods=['POST'])
+@app.route('/webhook_2025', methods=['POST'])
 def webhook():
     # Ruta al repositorio donde se realizará el pull
     path_repo = '/ruta/a/tu/repositorio/en/PythonAnywhere'
